@@ -1,0 +1,30 @@
+
+						<style>
+h5{
+            color: red;
+            font-family: "Playfair Display",sans-serif;
+			font-style: italic;
+			font-size: 22px;
+			line-height: 22px;
+			margin-bottom: 25px;
+}
+
+h4{
+            color: green;
+            font-family: "Playfair Display",sans-serif;
+			font-style: italic;
+			font-size: 22px;
+			line-height: 22px;
+			margin-bottom: 25px;
+}
+
+
+</style>    {%if messages%}
+				{%for message in messages %}
+						{% if message.tags == 'info'%}
+				           <h5>{{message}}</h5>
+						{% elif message.tags == 'success'%}
+						<h4>{{message}}</h4>
+						{%endif%}
+					{% endfor %}
+						{%endif%}
